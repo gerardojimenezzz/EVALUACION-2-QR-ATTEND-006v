@@ -1,0 +1,30 @@
+.qr-content {
+    --background: linear-gradient(to bottom, #f0f4f8, #d9e3f0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  ion-item {
+    margin-bottom: 15px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    --background: #007aff;
+    --color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  ion-button:hover {
+    --background: #005bb5;
+  }
+  
+  qrcode {
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  

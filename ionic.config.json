@@ -1,0 +1,7 @@
+{
+  "name": "QR Attend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

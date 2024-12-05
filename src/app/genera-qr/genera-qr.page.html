@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Generar QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="qr-content">
+  <!-- Formulario para ingresar los datos del alumno -->
+  <ion-item>
+    <ion-label position="floating">Nombre del Alumno</ion-label>
+    <ion-input [(ngModel)]="student.name" placeholder="Ingresa el nombre del alumno"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Carrera</ion-label>
+    <ion-input [(ngModel)]="student.carrera" placeholder="Ingresa la carrera del alumno"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Sección</ion-label>
+    <ion-input [(ngModel)]="student.seccion" placeholder="Ingresa la sección del alumno"></ion-input>
+  </ion-item>
+
+  <!-- Botón para generar el QR -->
+  <ion-button expand="full" (click)="generateQRCode()">Generar QR</ion-button>
+
+  <!-- Mostrar QR generado -->
+  <div *ngIf="createdCode">
+    <qrcode [qrdata]="createdCode" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  </div>
+</ion-content>

@@ -1,0 +1,124 @@
+<ion-menu side="start" menuId="first" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title class="menu-title">QR Attend</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="menu-content">
+    <!-- Imagen de encabezado del menú -->
+    <div class="menu-image">
+      <img #logo src="assets/icon/logomenu.png" alt="Logo QR Attend">
+    </div>
+
+    <div class="menu-header">Menu QR Attend</div>
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item routerLink="/home" routerLinkActive="active">
+          <ion-icon slot="start" name="home"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/tabs" routerLinkActive="active">
+          <ion-icon slot="start" name="git-network-outline"></ion-icon>
+          <ion-label>Marcar Asistencia</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/acerca" routerLinkActive="active">
+          <ion-icon slot="start" name="help-circle-sharp"></ion-icon>
+          <ion-label>Acerca</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/ayuda" routerLinkActive="active">
+          <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+          <ion-label>Ayuda</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu App - {{usuario}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-title><img #logo src="assets/icon/logoduocuc.png" alt="Logotipo de la Empresa" class="logo mb-3" /> </ion-title>
+
+<style>
+  /* Estilo para el fondo y el texto del menú */
+  .menu-content {
+    background: linear-gradient(to bottom right, #1b2838, #2e3b4e);
+    color: #2d7743;
+  }
+
+  /* Estilos para el título del menú */
+  .menu-title {
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  /* Estilos para la imagen en el menú */
+  .menu-image {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .menu-image img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    border-radius: 50%;
+  }
+
+  /* Estilos para la lista de elementos en el menú */
+  .menu-header {
+    padding: 16px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #212020;
+  }
+
+  ion-item {
+    --background: transparent;
+    --color: #000000;
+    --min-height: 50px;
+    border-bottom: 1px solid #455a64;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Efecto hover para elementos del menú */
+  ion-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Estilo para el contenido principal */
+  .main-content {
+    background: linear-gradient(to bottom right, #f1f1f1, #e0e0e0);
+    padding: 20px;
+  }
+
+  /* Personalización de los íconos */
+  ion-icon {
+    color: #90caf9;
+    font-size: 1.3em;
+  }
+
+  /* Estilos de color para el botón del menú */
+  ion-menu-button {
+    color: #000000;
+  }
+</style>

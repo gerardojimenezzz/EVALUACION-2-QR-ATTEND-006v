@@ -1,0 +1,212 @@
+// Fondo con un patrón de colores tecnológicos y modernos
+.menu-content {
+    background: linear-gradient(135deg, #1b2838 25%, #2e3b4e 75%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: gradient-animation 10s ease infinite;
+  }
+  
+  // Animación de cambio de color en el fondo
+  @keyframes gradient-animation {
+    0% {
+      background: linear-gradient(135deg, #1b2838 25%, rgb(167, 196, 240) 75%);
+    }
+    50% {
+      background: linear-gradient(135deg, #c5cedc 25%, #e1efff 75%);
+    }
+    100% {
+      background: linear-gradient(135deg, #1b2838 25%, #2e3b4e 75%);
+    }
+  }
+  
+  // Estilo para el título
+  .menu-title {
+    font-size: 1.6rem;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 0;
+  }
+  
+  // Efecto hover en los elementos del menú
+  ion-item {
+    --background: transparent;
+    --color: #ffffff;
+    --min-height: 50px;
+    border-bottom: 1px solid #a0c7d9;
+    transition: transform 0.3s, background-color 0.3s;
+  
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: scale(1.05);
+    }
+  }
+  
+  // Animación de aparición para los elementos del menú
+  ion-item {
+    opacity: 0;
+    animation: fade-in 1s forwards;
+  }
+  
+  // Animación de aparición con retardo
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  // Efectos de sombra y borde
+  ion-icon {
+    color: #90caf9;
+    font-size: 1.3em;
+    filter: drop-shadow(0 0 5px #1b2838);
+  }
+
+  @keyframes gradient-overlay {
+    0% {
+      background: rgba(182, 191, 201, 0.8);
+    }
+    50% {
+      background: rgba(160, 169, 183, 0.8);
+    }
+    100% {
+      background: rgba(218, 227, 239, 0.8);
+    }
+  }
+
+  // Estilo para el título
+.menu-title {
+    font-size: 1.6rem;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 0;
+    z-index: 2;
+  }
+  
+  // Estilo de items y animación de aparición
+ion-item {
+    --background: transparent;
+    --color: #6dffc4;
+    --min-height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    z-index: 2;
+    
+    &:hover {
+      background-color: rgb(255, 255, 255);
+      transform: scale(1.05);
+    } 
+    // Aparecer cada item con efecto de delay
+  opacity: 0;
+  animation: fade-in 1s forwards;
+
+  &:nth-child(1) { animation-delay: 0.3s; }
+  &:nth-child(2) { animation-delay: 0.5s; }
+  &:nth-child(3) { animation-delay: 0.7s; }
+}
+
+// Keyframes para fade-in
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  // Personalización de los iconos
+  ion-icon {
+    color: #90caf9;
+    font-size: 1.3em;
+    filter: drop-shadow(0 0 5px #a5b7cd);
+    z-index: 2;
+  }
+
+  
+  
+/* Centrar el menú en el medio de la pantalla */
+.menu-content {
+  background: linear-gradient(to bottom right, #1b2838, #2e3b4e);
+  color: #2d7743;
+  
+  display: flex; /* Habilitar flexbox */
+  flex-direction: column; /* Apilar elementos verticalmente */
+  align-items: center; /* Centrar elementos horizontalmente */
+  justify-content: center; /* Centrar elementos verticalmente */
+
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Estilos para el título del menú */
+.menu-title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* Estilos para la imagen en el menú */
+.menu-image {
+  text-align: center;
+  padding: 15px;
+}
+
+.menu-image img {
+  width: 100px; /* Ajusta el tamaño según sea necesario */
+  border-radius: 50%;
+}
+
+/* Estilos para la lista de elementos en el menú */
+.menu-header {
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+}
+
+ion-item {
+  --background: transparent;
+  --color: #ffffff;
+  --min-height: 50px;
+  border-bottom: 1px solid #455a64;
+  transition: background-color 0.3s ease;
+  width: 80%; /* Limitar ancho para centrarlo */
+  margin-bottom: 10px; /* Espacio entre elementos */
+}
+
+/* Efecto hover para elementos del menú */
+ion-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Personalización de los íconos */
+ion-icon {
+  color: #90caf9;
+  font-size: 1.3em;
+}
+
+/* Estilo para el contenido principal */
+.main-content {
+  background: linear-gradient(to bottom right, #f1f1f1, #e0e0e0);
+  padding: 20px;
+}
+
+/* Botón del menú */
+ion-menu-button {
+  color: #000000;
+}
+
+  
+  

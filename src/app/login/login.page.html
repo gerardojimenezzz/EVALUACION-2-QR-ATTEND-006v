@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg-green center-content">
+  <div class="logo-container text-center my-4 animate__animated animate__fadeInDown">
+    <img #logo src="assets/icon/logoduocuc.png" alt="Logotipo de la Empresa" class="logo mb-3" />
+    <p #text class="text fs-3 fw-bold">Inicia sesión</p>
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="animate__animated animate__fadeInUp">
+    <ion-item class="mb-3">
+      <ion-label position="stacked">Usuario</ion-label>
+      <ion-input formControlName="username" placeholder="Ingresa Usuario" maxlength="50"></ion-input>
+    </ion-item>
+
+    <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="text-danger">
+      Error Usuario
+    </div>
+
+    <ion-item class="mb-3">
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password" placeholder="*********" maxlength="50"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">
+      Ingresar
+    </ion-button>
+  </form>
+
+  <!-- Opción de registro -->
+  <div class="register-container text-center mt-4">
+    <p>¿No tienes una cuenta?</p>
+    <ion-button fill="clear" routerLink="/register" class="btn-register">
+      Regístrate aquí
+    </ion-button>
+  </div>
+</ion-content>
+
+<style>
+  ion-content {
+    --background: linear-gradient(to bottom right, #0d222b, #e9f4f7); /* Fondo degradado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .register-container p {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .btn-register {
+    --color: #ffd700;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .btn-register:hover {
+    --color: #fff;
+    --background: #ffd700;
+    border-radius: 10px;
+  }
+
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;    /* Centra horizontalmente */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    padding: 0 20px; /* Evita que el contenido toque los bordes */
+  }
+</style>
+
